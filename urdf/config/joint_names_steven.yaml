@@ -1,0 +1,1 @@
+controller_joint_names: ['motor_izquierdo_llanta_izquierda_joint', 'motor_derecho_llanta_derecha_joint', 'caja_delantera_soporte_delantero_joint', 'soporte_delantero_rueda_loca_delantera_joint', 'caja_trasera_soporte_trasero_joint', 'soporte_trasero_rueda_loca_trasera_joint', ]

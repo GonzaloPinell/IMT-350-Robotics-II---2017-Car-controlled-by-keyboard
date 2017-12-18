@@ -1,0 +1,997 @@
+<robot
+  name="steven">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0086281 -0.004071 0.11646"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 151 167 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="motor_izquierdo_link">
+    <inertial>
+      <origin
+        xyz="0.00025823 0.010108 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.75" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/motor_izquierdo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 188 212 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/motor_izquierdo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_motor_izquierdo_joint"
+    type="fixed">
+    <origin
+      xyz="0.031372 -0.11646 -0.026571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_izquierdo_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="llanta_izquierda_link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 -0.02322 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/llanta_izquierda_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="35 50 56 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/llanta_izquierda_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_izquierdo_llanta_izquierda_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 0.01 0"
+      rpy="-3.1416 -1.3248 -1.5708" />
+    <parent
+      link="motor_izquierdo_link" />
+    <child
+      link="llanta_izquierda_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="motor_derecho_link">
+    <inertial>
+      <origin
+        xyz="0.00025823 0.010108 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.75" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/motor_derecho_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 188 212 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/motor_derecho_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_motor_derecho_joint"
+    type="fixed">
+    <origin
+      xyz="-0.048628 -0.11646 -0.026571"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_derecho_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="llanta_derecha_link">
+    <inertial>
+      <origin
+        xyz="-8.3267E-17 -0.02322 7.2858E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/llanta_derecha_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="35 50 56 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/llanta_derecha_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_derecho_llanta_derecha_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 0.01 0"
+      rpy="3.1416 1.4507 -1.5708" />
+    <parent
+      link="motor_derecho_link" />
+    <child
+      link="llanta_derecha_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="caja_delantera_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 -1.7347E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/caja_delantera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 188 212 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/caja_delantera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_caja_delantera_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0086281 -0.15646 -0.011571"
+      rpy="1.5708 6.123E-17 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="caja_delantera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="soporte_delantero_link">
+    <inertial>
+      <origin
+        xyz="0.0046892 0.0091648 -7.4593E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/soporte_delantero_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="144 164 174 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/soporte_delantero_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caja_delantera_soporte_delantero_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="7.1251E-15 0.059893 3.1416" />
+    <parent
+      link="caja_delantera_link" />
+    <child
+      link="soporte_delantero_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rueda_loca_delantera_link">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 9.0206E-17 -4.3021E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/rueda_loca_delantera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="69 90 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/rueda_loca_delantera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="soporte_delantero_rueda_loca_delantera_joint"
+    type="continuous">
+    <origin
+      xyz="0.0115 0.026 0"
+      rpy="-1.5708 1.5821E-15 -2.5651" />
+    <parent
+      link="soporte_delantero_link" />
+    <child
+      link="rueda_loca_delantera_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="caja_trasera_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/caja_trasera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 188 212 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/caja_trasera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_caja_trasera_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0086281 -0.076459 -0.011571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caja_trasera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="soporte_trasero_link">
+    <inertial>
+      <origin
+        xyz="0.0046892 0.0091648 -1.0408E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/soporte_trasero_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="144 164 174 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/soporte_trasero_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caja_trasera_soporte_trasero_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="-6.638E-15 1.3602 3.1416" />
+    <parent
+      link="caja_trasera_link" />
+    <child
+      link="soporte_trasero_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rueda_loca_trasera_link">
+    <inertial>
+      <origin
+        xyz="1.3878E-16 0 -4.5103E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/rueda_loca_trasera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="69 90 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/rueda_loca_trasera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="soporte_trasero_rueda_loca_trasera_joint"
+    type="continuous">
+    <origin
+      xyz="0.0115 0.026 0"
+      rpy="1.5708 1.6653E-16 -0.58323" />
+    <parent
+      link="soporte_trasero_link" />
+    <child
+      link="rueda_loca_trasera_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="palo1_link">
+    <inertial>
+      <origin
+        xyz="0 0.045 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 96 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_palo1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.033628 -0.15646 -0.006571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palo1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tapa1_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 151 167 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palo1_tapa1_joint"
+    type="fixed">
+    <origin
+      xyz="0.025 0.085 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="palo1_link" />
+    <child
+      link="tapa1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="palo2_link">
+    <inertial>
+      <origin
+        xyz="0 0.045 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 96 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_palo2_joint"
+    type="fixed">
+    <origin
+      xyz="0.016372 -0.15646 -0.006571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palo2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tapa2_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 151 167 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palo2_tapa2_joint"
+    type="fixed">
+    <origin
+      xyz="-0.025 0.085 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="palo2_link" />
+    <child
+      link="tapa2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="palo3_link">
+    <inertial>
+      <origin
+        xyz="0 0.045 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 96 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_palo3_joint"
+    type="fixed">
+    <origin
+      xyz="-0.033628 -0.076459 -0.006571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palo3_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tapa3_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 151 167 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palo3_tapa3_joint"
+    type="fixed">
+    <origin
+      xyz="0.025 0.085 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="palo3_link" />
+    <child
+      link="tapa3_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="palo4_link">
+    <inertial>
+      <origin
+        xyz="0 0.045 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.125" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 96 100 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/palo4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_palo4_joint"
+    type="fixed">
+    <origin
+      xyz="0.016372 -0.076459 -0.006571"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palo4_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="tapa4_link">
+    <inertial>
+      <origin
+        xyz="0 0.0025 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.25" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 151 167 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://steven/meshes/tapa4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palo4_tapa4_joint"
+    type="fixed">
+    <origin
+      xyz="-0.025 0.085 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="palo4_link" />
+    <child
+      link="tapa4_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
